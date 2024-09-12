@@ -1,18 +1,9 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
-
-# Other files and folders
-.settings/
-
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
-
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+@echo off
+echo Windows Registry Editor Version 5.00 > temp.reg
+echo. >> temp.reg
+echo [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout] >> temp.reg
+echo "Scancode Map"=hex:00,00,00,00,00,00,00,00,02,00,00,00,73,00,1d,e0,00,00,00,00 >> temp.reg
+reg import temp.reg
+del temp.reg
+echo Registro importado com sucesso!
+pause
